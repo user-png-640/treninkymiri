@@ -1,418 +1,353 @@
-<!DOCTYPE html>
-<html lang="cs"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Když váš pes vrčí a kouše: Praktický průvodce bezpečnou nápravou</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        @page {
-            size: A4;
-            margin: 20mm;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            background: white;
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            font-family: 'Merriweather', serif;
-            color: #2c3e50;
-            font-size: 36px;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #e74c3c;
-        }
-        
-        .intro {
-            font-style: italic;
-            color: #555;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-        }
-        
-        h2 {
-            font-family: 'Merriweather', serif;
-            color: #34495e;
-            font-size: 26px;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            padding-top: 10px;
-        }
-        
-        h3 {
-            font-family: 'Open Sans', sans-serif;
-            color: #e74c3c;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 25px;
-            margin-bottom: 12px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 15px;
-        }
-        
-        .case-study {
-            background: #f0f7ff;
-            border-left: 4px solid #3498db;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .case-study h3 {
-            color: #2980b9;
-            margin-top: 0;
-        }
-        
-        .warning-story {
-            background: #fff5f5;
-            border-left: 4px solid #e74c3c;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .warning-story h3 {
-            color: #c0392b;
-            margin-top: 0;
-        }
-        
-        .timeline {
-            background: #f8f9fa;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        .timeline ul {
-            list-style: none;
-            padding-left: 25px;
-        }
-        
-        .timeline li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        
-        .timeline li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
-        }
-        
-        .action-plan {
-            background: #e8f8f5;
-            border: 2px solid #27ae60;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-        
-        .action-plan h3 {
-            color: #27ae60;
-            margin-top: 0;
-        }
-        
-        .action-plan ol {
-            padding-left: 25px;
-        }
-        
-        .action-plan li {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        
-        strong {
-            color: #2c3e50;
-            font-weight: 600;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-        
-        .quote {
-            font-style: italic;
-            color: #555;
-            border-left: 3px solid #95a5a6;
-            padding-left: 20px;
-            margin: 20px 0;
-        }
-        
-        .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
-            text-align: center;
-            font-size: 14px;
-            color: #7f8c8d;
-        }
-        
-        .contact-box {
-            background: #2c3e50;
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        
-        .contact-box h3 {
-            color: white;
-            margin-top: 0;
-        }
-        
-        .contact-box p {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-            padding: 20px;
-            background: #ecf0f1;
-            border-radius: 10px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 32px;
-            font-weight: bold;
-            color: #e74c3c;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: #7f8c8d;
-        }
-        
-        @media print {
-            body {
-                padding: 0;
-            }
-            
-            .case-study, .warning-story, .action-plan {
-                break-inside: avoid;
-            }
-            
-            h2, h3 {
-                break-after: avoid;
-            }
-        }
-    </style>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Když váš pes vrčí a kouše při manipulaci – Praktický průvodce</title>
+  <meta name="description" content="Praktický, bezpečný a měřitelný plán nápravy vrčení a kousání při manipulaci. Vhodné pro domácí trénink i práci trenéra.">
+  <style>
+    /* --- Minimal clean blog look (fits manus.space vibe) --- */
+    :root{
+      --bg:#fcfcfc;
+      --fg:#0f172a;     /* slate-900 */
+      --muted:#667085;  /* grey-500/600 */
+      --card:#ffffff;
+      --border:#e6e8ec;
+      --accent:#0ea5a6; /* teal-500 */
+      --accent-weak:#e6fbfb;
+      --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
+      --radius:14px;
+      --maxw:780px;
+    }
+    html,body{background:var(--bg); color:var(--fg); margin:0; padding:0;}
+    body{font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Cantarell,"Noto Sans",sans-serif; text-rendering:optimizeLegibility}
+    .container{max-width:var(--maxw); margin:0 auto; padding:28px 20px 80px}
+    article{display:block}
+    h1,h2,h3{line-height:1.25; letter-spacing:-.01em; margin:0 0 .8rem}
+    h1{font-size:clamp(1.8rem,3.2vw,2.4rem); font-weight:800; margin-top:.2rem}
+    h2{font-size:clamp(1.25rem,2.2vw,1.6rem); font-weight:750; margin-top:2.2rem}
+    h3{font-size:clamp(1.05rem,1.8vw,1.2rem); font-weight:700; margin-top:1.8rem}
+    p{margin:.4rem 0 1rem}
+    .lead{font-size:1.05rem; color:var(--muted)}
+    hr{border:none; height:1px; background:linear-gradient(to right,transparent, var(--border), transparent); margin:2rem 0}
+    ul,ol{padding-left:1.2rem}
+    li{margin:.3rem 0}
+    .tip{background:var(--accent-weak); border:1px solid #c8f1f1; border-left:4px solid var(--accent);
+         padding:12px 14px; border-radius:12px; box-shadow:var(--shadow); margin:1.25rem 0}
+    /* --- Figures & placeholders --- */
+    figure{margin:1.6rem 0; background:var(--card); border:1px solid var(--border);
+           border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+    .ph{aspect-ratio:16/9; display:grid; place-items:center; color:#0b4d4e;
+        background:
+          linear-gradient(180deg,rgba(14,165,166,.07),rgba(14,165,166,.03)),
+          repeating-linear-gradient(45deg, #eaf7f7, #eaf7f7 12px, #f5fbfb 12px, #f5fbfb 24px);
+        font-weight:600; text-align:center; padding:14px}
+    .ph small{display:block; color:#0b4d4e; opacity:.75; font-weight:500; margin-top:.25rem}
+    figcaption{font-size:.92rem; color:var(--muted); padding:10px 14px 14px}
+    /* utility for compact 2-col lists if needed later */
+    .cols{display:grid; gap:.5rem .8rem}
+    @media(min-width:720px){ .cols{grid-template-columns:1fr 1fr} }
+    /* --- Nice anchors --- */
+    section[id]{scroll-margin-top:84px}
+    a.anchor{color:inherit; text-decoration:none; position:relative}
+    a.anchor::after{content:"#"; color:var(--accent); opacity:.0; margin-left:.4ch}
+    a.anchor:hover::after{opacity:.8}
+    /* --- Footer meta --- */
+    .meta{color:var(--muted); font-size:.95rem; margin-bottom:1rem}
+  </style>
 </head>
 <body>
-    <h1>Když váš pes vrčí a kouše: Praktický průvodce bezpečnou nápravou</h1>
-    
-    
-    
-    
-    
-    <h2>Proč píšu tento článek</h2>
-    
-    
-    
-    <p><strong>Pravda je taková:</strong> Při správném přístupu se <span class="highlight">96 % psů s agresivním chováním výrazně zlepší</span>. Ale musíte vědět, co dělat – a hlavně, co NEDĚLAT.</p>
-    
-    <h2>První krok: Vyloučit zdravotní příčiny</h2>
-    
-    <div class="case-study">
-        <h3>Příběh Belly – zlatého retrívra, který „zničehonic“ začal kousat</h3>
-        <p>Bella byla vždy milující fenka. Pak během dvou týdnů začala 
-vrčet při česání a minulý měsíc pokousala svou majitelku při nasazování 
-obojku. „Je to agrese z dominance?“ ptala se majitelka.</p>
-        <p><strong>Realita:</strong> Rentgen ukázal těžkou dysplazii 
-kyčlí. Bella trpěla bolestí celé měsíce. Po nasazení správné medikace a 
-fyzioterapie se její „agrese“ vytratila během 3 týdnů.</p>
-    </div>
-    
-    <p><strong>Moje rada:</strong> VŽDY začněte u veterináře. <span class="highlight">15 % psů</span>, které ke mně přijdou s „problémovým chováním“, ve skutečnosti trpí bolestí nebo nemocí.</p>
-    
-    <h2>Metody, které skutečně fungují</h2>
-    
-    <h3>1. Desenzibilizace a protipodmiňování – můj zlatý standard</h3>
-    
-    <div class="case-study">
-        <h3>Případová studie: Rocky, německý ovčák s historií kousání</h3>
-        <p>Rocky přišel ke mně po třech incidentech kousnutí během 
-stříhání drápků. Jeho majitel, pan Dvořák, byl zoufalý – zvažoval 
-eutanazii.</p>
-        
-        <p><strong>Náš postup:</strong></p>
-        <ul style="list-style: none; padding-left: 0;">
-            <li>• <strong>Týden 1–2:</strong> Rocky se učil, že pohled na kleštičky = sýr. Kleštičky ležely 3 metry od něj.</li>
-            <li>• <strong>Týden 3–4:</strong> Kleštičky se postupně přibližovaly. Rocky zůstával klidný = více sýra.</li>
-            <li>• <strong>Týden 5–8:</strong> Dotýkali jsme se kleštičkami jeho tlapky na 1 sekundu. Okamžitá odměna.</li>
-            <li>• <strong>Týden 9–12:</strong> První úspěšné ostříhání jednoho drápku bez stresu.</li>
-        </ul>
-        
-        <p><strong>Výsledek po 6 měsících:</strong> Rocky klidně nechá ostříhat všechny drápky. Pan Dvořák pláče dojetím, když mi to vypráví.</p>
-    </div>
-    
-    <h3>2. Bucket Game – hra, která změnila můj přístup</h3>
-    
-    
-    
-    <div class="case-study">
-        <h3>Jak to vypadá v praxi</h3>
-        <p>Vzpomínám si na jezevčíka Ferdu, který nenáviděl kartáčování. Jeho majitelka, učitelka Eva, byla pokousaná třikrát.</p>
-        
-        <p>Postavila jsem misku s játrovými pamlsky 30 cm od Ferdy. 
-„Když se Ferda dívá na misku, můžete se ho dotknout hřebenem. Když 
-odvrátí pohled, okamžitě přestaňte,“ vysvětlila jsem.</p>
-        
-        <ul style="list-style: none; padding-left: 0;">
-            <li>• <strong>První den:</strong> Eva se dotkla Ferdy na 2 sekundy, než odvrátil pohled.</li>
-            <li>• <strong>Po týdnu:</strong> Ferda udržel pohled 30 sekund během kartáčování.</li>
-            <li>• <strong>Po měsíci:</strong> Celé kartáčování zvládli pomocí této „hry“.</li>
-        </ul>
-        
-        <p class="quote">„Je to jako mít tlačítko pauza,“ směje se Eva. „Ferda konečně drží.“</p>
-    </div>
-    
-    
-    
-    
-    
-    <h2>Časová osa – realistická očekávání</h2>
-    
-    <div class="timeline">
-        <h3>Co můžete čekat</h3>
-        
-        <p><strong>Případ lehké agrese (vrčení při česání):</strong></p>
-        <ul>
-            <li>2 týdny: Nastavení bezpečnostních protokolů</li>
-            <li>4 týdny: První viditelné zlepšení</li>
-            <li>8 týdnů: Významný pokrok</li>
-            <li>3 měsíce: Většina situací zvládnuta</li>
-        </ul>
-        
-        <p><strong>Případ těžké agrese (historie kousání):</strong></p>
-        <ul>
-            <li>1 měsíc: Stabilizace, prevence dalších incidentů</li>
-            <li>2–3 měsíce: Začátek pozitivních změn</li>
-            <li>6 měsíců: Podstatné zlepšení</li>
-            <li>12+ měsíců: Dlouhodobý management</li>
-        </ul>
-    </div>
-    
-    <h2>Největší chyby, které vídám (a jejich následky)</h2>
-    
-    <div class="warning-story">
-        <h3>Chyba #1: „Ukázat, kdo je pánem“</h3>
-        <p><strong>Skutečný příběh:</strong> Majitel rotvajlera Bruna 
-četl na internetu o „alpha rollu“. Když Bruno vrčel při kontrole uší, 
-majitel ho srazil na záda a držel.</p>
-        <p><strong>Následek:</strong> Bruno začal kousat bez varování. Vrčení je komunikace – když ho potlačíte, pes přejde rovnou k akci.</p>
-    </div>
-    
-    <div class="warning-story">
-        <h3>Chyba #2: Elektrické obojky a další „rychlá řešení“</h3>
-        <p>Studie z University of Pennsylvania ukázala, že <span class="highlight">43 % psů reaguje na tyto metody zvýšenou agresí</span>. Viděla jsem to na vlastní oči u desítek případů.</p>
-        <p><strong>Pamatujte:</strong> Strach nikdy nevyléčíte větším strachem.</p>
-    </div>
-    
-    <div class="warning-story">
-        <h3>Chyba #3: Ignorování prvních varovných signálů</h3>
-        <p><strong>Typický scénář:</strong></p>
-        <ul style="list-style: none; padding-left: 0;">
-            <li>• Pes ztuhnul při dotyku → „Ale nekousl, tak to je OK“</li>
-            <li>• Pes zavrčel → „Musím ho naučit, že vrčet nesmí“</li>
-            <li>• Pes kousl → „Z ničeho nic!“</li>
-        </ul>
-        <p>Ne, nebylo to z ničeho nic. Pes komunikoval celou dobu.</p>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    <h2>Praktický akční plán</h2>
-    
-    <div class="action-plan">
-        <h3>Tento týden:</h3>
-        <ol>
-            <li><strong>Zavolejte veterináři</strong> – vyloučit zdravotní příčiny</li>
-            <li><strong>Přestaňte trestat vrčení</strong> – je to cenná komunikace</li>
-            <li><strong>Začněte deník</strong> – kdy, kde, co spouští reakci</li>
-            <li><strong>Připravte pamlsky</strong> – sýr, játra, kuřecí – nejvyšší hodnota</li>
-        </ol>
-        
-        <h3>Příští týden:</h3>
-        <ol>
-            <li><strong>Vyberte jednu situaci</strong> – nejlehčí problém</li>
-            <li><strong>Začněte na velkou vzdálenost</strong> – tam, kde pes zůstává klidný</li>
-            <li><strong>Odměňujte klid</strong> – ne až když se něco pokazí</li>
-            <li><strong>Buďte trpěliví</strong> – 5 minut denně stačí</li>
-        </ol>
-        
-        <h3>Za měsíc:</h3>
-        <p>Zavolejte mi nebo jinému kvalifikovanému trenérovi a zhodnoťte pokrok.</p>
-    </div>
-    
-    <h2>Závěrečná myšlenka</h2>
-    
-    <p>Po všech těch letech a stovkách případů vím jedno jistě: Každý 
-pes, který vrčí nebo kouše, má důvod. Naším úkolem není tento důvod 
-potlačit, ale pochopit a pracovat s ním.</p>
-    
-    <p>Pamatujte si příběh Lucky – bígla, kterého majitelé chtěli 
-utratit po pokousání dítěte. Dnes, o dva roky později, spí každou noc v 
-posteli s tím samým dítětem. Majitelka mi nedávno napsala: „Lucky nás 
-naučil, že láska a trpělivost dokážou zázraky.“</p>
-    
-    <p><strong>Váš pes není „zlý“ nebo „dominantní“.</strong> Je 
-vystrašený, má bolesti, nebo se prostě neumí jinak vyjádřit. Se správným 
-přístupem, trpělivostí a odbornými metodami můžete společně najít cestu 
-ke klidnému a bezpečnému soužití.</p>
-    
-    
-    
-    <div class="contact-box">
-        <h3>Potřebujete pomoc?</h3>
-        <p>Nabízím online konzultaci pro posouzení vašeho případu.</p>
-        <p>treninkymiri@seznam.cz</p>
-        <p><a href="https://bit.ly/treninkymiri" style="color: lightblue;">bit.ly/treninkymiri</a></p>
-    </div><div>
-        
-        
-    </div>
+  <main class="container">
+    <article itemscope itemtype="https://schema.org/Article">
+      <header>
+        <p class="meta">Praktický průvodce · pro klienty a trenéry</p>
+        <h1 itemprop="headline">Když váš pes vrčí a kouše při manipulaci</h1>
+        <h2 class="lead">Praktický, bezpečný a měřitelný plán + příběhy z praxe</h2>
+      </header>
 
-</body></html>
+      <section id="proc-psi-vrci">
+        <h3><a class="anchor" href="#proc-psi-vrci">Proč psi vrčí — a proč je to vlastně dobrá zpráva</a></h3>
+        <p>Vrčení je <strong>varovný komunikační signál</strong>, ne vzdor. Pes tím říká: „Je mi to nepříjemné, zpomal nebo přestaň.“ Potlačování nebo trestání vrčení (křik, škubnutí, „alpha-roll“, šokový obojek) zvyšuje stres i riziko kousnutí, protože zvíře se může naučit varování vynechat. Prioritou je <strong>bezpečnost, management</strong> a <strong>postupná desenzibilizace s protipodmiňováním</strong>.</p>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Pes: uvolněné vs. napjaté tělo, s bublinami vysvětlujícími signály">
+            Obrázek – rozdíl uvolněné vs. napjaté tělo
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Pes s jemným vrčením: porovnání uvolněného a napjatého těla; bubliny vysvětlující signály.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="rychly-plan">
+        <h2><a class="anchor" href="#rychly-plan">Rychlý 5bodový plán (začněte hned dnes)</a></h2>
+        <ol>
+          <li><strong>Management a bezpečí:</strong> Omezte rizikové situace (česání mimo úzké chodby, klid u jídla, dělicí branky). U psů s rizikem kousnutí <strong>trénujte košík</strong> (viz níže) a v krizových chvílích jej používejte.</li>
+          <li><strong>Veterina:</strong> Vylučte bolest či zdravotní příčinu (uši, zuby, klouby, kůže).</li>
+          <li><strong>Startovací signál („start-button“):</strong> Naučte psa <strong>„souhlas“</strong> (např. bradička na dlani nebo na polštáři). Dokud bradu drží → pokračujete; jakmile ji zvedne → pauza.</li>
+          <li><strong>Mikrokroky a jackpot:</strong> Pracujte v minikrocích (1–2&nbsp;s doteku), používejte hodnotné pamlsky a končete dřív, než stoupne napětí.</li>
+          <li><strong>Deník pokroku:</strong> Zapisujte <em>co, kde na těle, jak dlouho</em> a <em>jaká byla reakce</em> (šablona níže).</li>
+        </ol>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Pět ikon v řadě – zámek, stetoskop, brada, stupnice mikrokroků, zápisník">
+            Obrázek – 5 ikon rychlého plánu
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>„Rychlý plán“ jako 5 ikon v řadě.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="mapa-zon">
+        <h2><a class="anchor" href="#mapa-zon">Mapa zón: kde je to psovi příjemné a kde už „žlutá/červená“</a></h2>
+        <ul class="cols">
+          <li><strong>Zelená:</strong> Místa, kde manipulaci snáší (např. hřbet).</li>
+          <li><strong>Žlutá:</strong> Potřeba mikrokroků a krátkých dotyků (např. krk).</li>
+          <li><strong>Červená:</strong> Zatím <strong>netestovat bez odborníka</strong>; nejdřív košík + startovací signál + management (např. citlivé tlapky).</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Silueta psa s barevně vyznačenými oblastmi zelená/žlutá/červená a legendou">
+            Obrázek – silueta psa s mapou zón
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Silueta psa s vybarvenými oblastmi „zelená/žlutá/červená“ + legenda.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="start-button">
+        <h2><a class="anchor" href="#start-button">Kooperativní péče a „start-button“: jak dát psovi hlas</a></h2>
+        <p><strong>Princip:</strong> Pes se naučí chování, kterým <strong>dává souhlas</strong> (typicky <strong>bradička – chin rest</strong>). Vy <strong>okamžitě přestanete</strong>, jakmile signál přeruší. Tím klesá stres a roste důvěra.</p>
+        <p><strong>Jak začít (2–3&nbsp;min denně):</strong></p>
+        <ul>
+          <li>A) Značka: polštářek nebo vaše dlaň. Za <strong>dobrovolné položení brady</strong> následuje odměna.</li>
+          <li>B) Prodlužujte <strong>trvání</strong> (1&nbsp;s → 3&nbsp;s → 5&nbsp;s…).</li>
+          <li>C) Přidávejte <strong>rušivé prvky</strong>: přiblížení kartáče, pak krátký dotek, poté delší.</li>
+          <li>D) Pravidlo: <strong>brada = pokračuj, zvednutí = pauza</strong>.</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Sekvence tří snímků chin-rest: brada na dlani → přiblížení kartáče → pauza při zvednutí brady">
+            Obrázek – sekvence „chin rest“
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>3-snímková sekvence „chin rest“ — brada na dlani → přiblížení kartáče → pauza při zvednutí brady.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="bucket-game">
+        <h2><a class="anchor" href="#bucket-game">„Bucket Game“: jednoduchý rámec souhlasu</a></h2>
+        <p>Pes se dívá na <strong>kbelík/misku</strong> = souhlas s postupem; odvrácení pohledu = pauza. Postupujte <strong>po krocích</strong> (pohled → dotek → krátká manipulace → delší). Skvělé pro <strong>uši, tlapky, zuby</strong> i péči u veterináře.</p>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Pes na podložce, kbelík na zemi, trenér s pamlsky; šipky: dívám se = ano, odvrátím = pauza">
+            Obrázek – ukázka Bucket Game
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Pes na podložce, kbelík jako „startovací bod“, jasné pravidlo pauzy.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="proc-ne-aversivy">
+        <h2><a class="anchor" href="#proc-ne-aversivy">Proč se vyhnout averzivním metodám</a></h2>
+        <p>Averzivní postupy (škrcení, trhání, šokové obojky) zhoršují emoční stav, zvyšují stres a často vedou k horší spolupráci. <strong>Odměnové metody</strong> jsou bezpečnější, čitelnější a u citlivých psů dlouhodobě účinnější.</p>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Jednoduchý graf: stres vs. úspěšnost – porovnání odměnových a averzivních metod">
+            Obrázek – graf stres × úspěšnost
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Jednoduché srovnání „stres × úspěšnost“ u dvou přístupů.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="muzzle">
+        <h2><a class="anchor" href="#muzzle">Nácvik košíku: 10 kroků v kostce</a></h2>
+        <ol>
+          <li><strong>Seznámení:</strong> Pamlsky <strong>uvnitř</strong> košíku, pes si <strong>sám strká čumák</strong> dovnitř.</li>
+          <li><strong>Marker</strong> („ano“), krmte skrz mřížku.</li>
+          <li><strong>Krátké trvání</strong> 1–2&nbsp;s → 5&nbsp;s → 10&nbsp;s.</li>
+          <li><strong>Zapnutí pásku</strong> na 1&nbsp;s, hned dolů → postupně prodlužujte.</li>
+          <li><strong>Pohyb:</strong> pár kroků s nasazeným košíkem → delší chůze.</li>
+          <li><strong>Rušivé podněty:</strong> kartáč u těla, dotek tlapky.</li>
+          <li><strong>Mikrosignály:</strong> ztuhnutí/tah na stranu? Pauza a krok zpět.</li>
+          <li><strong>Krmení skrz košík</strong> — lízací podložka.</li>
+          <li><strong>Generalizace</strong> (jiná místnost, jiný člověk).</li>
+          <li><strong>„Happy test“</strong>: sundám košík, pauza, krátká hra.</li>
+        </ol>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Fotokoláž 6 kroků nácviku košíku: čumák v košíku, zapnutí pásku, krmení skrz mřížku, chůze, dotek tlapky, pauza">
+            Obrázek – 6 kroků nácviku košíku
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Šest klíčových momentů nácviku košíku.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="protokoly-citlivky">
+        <h2><a class="anchor" href="#protokoly-citlivky">Protokoly pro běžné „citlivky“</a></h2>
+
+        <h3>Tlapky / drápky</h3>
+        <ul>
+          <li>Den 1–3: chin-rest 3–5&nbsp;s; <strong>dotek tlapky 1&nbsp;s</strong>, jackpot → pauza.</li>
+          <li>Den 4–7: držení tlapky 2–3&nbsp;s; ukázání kleštiček; <strong>1 nehet/den</strong>, konec.</li>
+          <li>Tip: u citlivých psů začněte <strong>pilníkem</strong> místo střihu.</li>
+        </ul>
+
+        <h3>Uši</h3>
+        <ul>
+          <li>Den 1–3: dotek ucha hřbetem ruky 1&nbsp;s → 3&nbsp;s.</li>
+          <li>Den 4–7: krátké <strong>odtažení boltce</strong> + odměna; <strong>bez kapek</strong>.</li>
+          <li>Den 8–12: jedna <strong>kapka fyziologického</strong> (po schválení veterinářem), ihned jackpot.</li>
+        </ul>
+
+        <h3>Zuby</h3>
+        <ul>
+          <li>Den 1–3: <strong>zvednutí pysku</strong> 1&nbsp;s → 3&nbsp;s.</li>
+          <li>Den 4–10: <strong>prstový kartáček</strong> s pastou – 1 řezák/den.</li>
+          <li>Den 11–14: <strong>kartáček</strong> – jen přední oblouk.</li>
+        </ul>
+
+        <h3>Srst / kartáč</h3>
+        <ul>
+          <li>Den 1–3: přiblížení kartáče 10–20&nbsp;cm.</li>
+          <li>Den 4–7: 1–2 jemné tahy na „zelené“ zóně.</li>
+          <li>Den 8–14: 3–5 tahů, přidat „žluté“ zóny.</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Čtyři miniscény: tlapka, ucho, zubní hygiena, kartáč – vždy s ikonou startovacího signálu">
+            Obrázek – 4 miniscény k protokolům
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Čtyři nejčastější oblasti péče – vždy s principem startovacího signálu.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="timeline">
+        <h2><a class="anchor" href="#timeline">Jak rychle postupovat: jednoduchá časová osa</a></h2>
+        <ul>
+          <li><strong>TENTO týden:</strong> bezpečnost (košík), startovací signál, 3–5 krátkých sezení <strong>denně po 1–2&nbsp;minutách</strong>.</li>
+          <li><strong>PŘÍŠTÍ týden:</strong> přidávejte <strong>1 nový mikrokrok</strong> denně (delší dotek, nový nástroj, jiné místo).</li>
+          <li><strong>ZA MĚSÍC:</strong> cílem je <strong>plynulá rutina</strong> v „zelených“ a většině „žlutých“ zón; u „červených“ pokračujte s trenérem.</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Časová osa s milníky – košík → bradička → mikrokroky → rutina">
+            Obrázek – časová osa tréninku
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Jednoduchá časová osa: pojistka, souhlas, mikrokroky, rutina.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="kdy-odbornik">
+        <h2><a class="anchor" href="#kdy-odbornik">Kdy zavolat odborníka</a></h2>
+        <ul>
+          <li><strong>Krev, bolest, šok:</strong> nejdřív veterinář.</li>
+          <li><strong>Prokousnutí kůže</strong> nebo <strong>opakovaná varování</strong> při běžné péči: trenér/behaviorista.</li>
+          <li><strong>Zhoršování navzdory mikrokrokům:</strong> revize plánu; někdy může dočasně pomoci farmakologická podpora po dohodě s veterinářem.</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Rozhodovací strom: veterina / trenér / pokračuj">
+            Obrázek – rozhodovací strom
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Jednoduché rozhodování: kdy a za kým jít.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="nejcastejsi-chyby">
+        <h2><a class="anchor" href="#nejcastejsi-chyby">Nejčastější chyby</a></h2>
+        <ul>
+          <li><strong>Příliš rychlé tempo.</strong> Dejte více času mezi kroky.</li>
+          <li><strong>Ignorování pauz.</strong> Nepřeskakujte signály nepohodlí.</li>
+          <li><strong>Nízká hodnota odměn.</strong> Zvyšte „cenu“ pamlsků (paštika, sýr).</li>
+          <li><strong>Chaotické prostředí.</strong> Omezte rušivé vlivy (děti, návštěvy, televize).</li>
+          <li><strong>„Zkratky“ silou.</strong> Svazování či nucení zvyšuje riziko.</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Dvojice piktogramů Do &amp; Don’t">
+            Obrázek – Do &amp; Don’t
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Rychlé srovnání správných a chybných postupů.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="pribehy">
+        <h2><a class="anchor" href="#pribehy">Příběhy z praxe (zkrácené)</a></h2>
+        <p><strong>Bella (uši)</strong> — Po dvou týdnech chin-rest + „kbelík“ + mikrodoteky zvládla <strong>3–4&nbsp;s odtažení boltce</strong> bez napětí; vyšetření u veterináře proběhlo s košíkem klidně.</p>
+        <p><strong>Rocky (tlapky)</strong> — Z „kousne při nůžkách“ na <strong>1 nehet/den</strong> s jackpotem během 10 dní; po měsíci kompletní střih tlapek s pauzami.</p>
+        <p><strong>Lucky (kartáč)</strong> — Nejprve jen <strong>přiblížení nástroje</strong>; po 3 týdnech zvládal 5 tahů v „žluté“ zóně.</p>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Před/po – ukazatel stresu 5→2; malý graf délka dotyku v čase">
+            Obrázek – před/po &amp; mini graf
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Přehledný náhled pokroku ve třech případech.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="tracker">
+        <h2><a class="anchor" href="#tracker">Šablona pro měření pokroku (vyplňujte po každém minitreninku)</a></h2>
+        <ul>
+          <li><strong>Datum / místo / osoba:</strong></li>
+          <li><strong>Zóna těla:</strong> zelená / žlutá / červená (dnešní stav)</li>
+          <li><strong>Krok:</strong> co přesně (např. „drží bradu 5&nbsp;s, dotek tlapky 2&nbsp;s“)</li>
+          <li><strong>Reakce psa:</strong> uvolnění / olíznutí čumáku / ztuhnutí / odvrácení / vrčení</li>
+          <li><strong>Poznámka:</strong> co zítra změním (menší krok, lepší odměna ap.)</li>
+        </ul>
+
+        <figure>
+          <div class="ph" role="img" aria-label="Náhled jedné stránky trackeru ve stylu tisknutelného formuláře">
+            Obrázek – tracker pokroku
+            <small>(placeholder 16:9)</small>
+          </div>
+          <figcaption>Náhled jedné stránky „Trackeru“ – připraveno k tisku.</figcaption>
+        </figure>
+      </section>
+
+      <hr>
+
+      <section id="mini-faq">
+        <h2><a class="anchor" href="#mini-faq">Mini-FAQ</a></h2>
+        <p><strong>Mám trestat, když zavrčí?</strong> Ne. Vrčení je informace. Trestem odstraníte varování, ne nepohodlí, a tím roste riziko kousnutí.</p>
+        <p><strong>K čemu košík, když trénujeme jemně?</strong> Je to <strong>pojistka proti kousnutí</strong> a zároveň „bezpečnostní deka“, která vám umožní dělat malé kroky bez obav.</p>
+        <p><strong>Co když to nejde kupředu?</strong> Zpomalte, zvyšte hodnotu odměn, snižte náročnost a zvažte konzultaci s odborníkem.</p>
+      </section>
+
+      <footer class="meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        Připravila: <span itemprop="name">Miriam Šebestíková</span> · <time itemprop="dateModified" datetime="2025-08-09">Aktualizováno 9. 8. 2025</time>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
