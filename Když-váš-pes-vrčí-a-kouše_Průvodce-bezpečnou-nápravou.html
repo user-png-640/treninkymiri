@@ -186,12 +186,37 @@
           <li><strong>Generalizace</strong> (jiná místnost, jiný člověk).</li>
           <li><strong>„Happy test“</strong>: sundám košík, pauza, krátká hra.</li>
         </ol>
-
         <figure>
-          <div class="ph" role="img" aria-label="Fotokoláž 6 kroků nácviku košíku: čumák v košíku, zapnutí pásku, krmení skrz mřížku, chůze, dotek tlapky, pauza">
-            Obrázek – 6 kroků nácviku košíku
-            <small>(placeholder 16:9)</small>
+          <div class="six-steps-grid" role="group" aria-label="6 kroků nácviku košíku">
+            <img src="img0001.png" alt="Nácvik košíku – čumák v košíku" loading="lazy" width="1000" height="1000">
+            <img src="img0002.png" alt="Nácvik košíku – zapnutí pásku" loading="lazy" width="1000" height="1000">
+            <img src="img0003.png" alt="Nácvik košíku – krmení skrz mřížku" loading="lazy" width="1000" height="1000">
+            <img src="img0004.png" alt="Nácvik košíku – chůze" loading="lazy" width="1000" height="1000">
+            <img src="img0005.png" alt="Nácvik košíku – dotek tlapky" loading="lazy" width="1000" height="1000">
+            <img src="img0006.png" alt="Nácvik košíku – pauza" loading="lazy" width="1000" height="1000">
           </div>
+          <style>
+            .six-steps-grid{
+            display:grid;
+            grid-template-columns:repeat(3,minmax(0,1fr));
+            gap:12px;
+            margin:12px 0;
+          }
+          .six-steps-grid img{
+            width:100%;
+            height:auto;
+            aspect-ratio:1/1;
+            object-fit:cover;
+            border-radius:8px;
+            background:#f4f6f8;
+          }
+          @media (max-width: 768px){
+            .six-steps-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+          }
+          @media (max-width: 480px){
+            .six-steps-grid{ grid-template-columns:1fr; }
+          }
+        </style>
           <figcaption>Šest klíčových momentů nácviku košíku.</figcaption>
         </figure>
       </section>
